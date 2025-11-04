@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en"><!--語言設定，可使搜尋引擎判定語言-->
     <head>
-        <meta charset="utf-8" />
-        <title></title>
+        <meta charset="utf-8" /><!--設定語言，避免中文亂碼-->
+        <title>文字間距</title><!--網頁標題-->
         <style>
-            #ls1 {letter-spacing: 1.5em}
-            #ls2 {letter-spacing: -5px}
+            #ls1 {letter-spacing: 1.5em}/*設定文字之間的間距*/
+            #ls2 {letter-spacing: -5px}/*負值代表文字距離更近*/
         </style>
     </head>
     <body>
         <h1>這是正常的文字間距</h1>
-        <h1 id="ls1">這是較大的文字間距</h1>
-        <h1 id="ls2">這是較小的文字間距</h1>
+        <h1 id="ls1">這是較大的文字間距</h1><!--套用id=ls1文字間距會變寬-->
+        <h1 id="ls2">這是較小的文字間距</h1><!--套用id=;s2文字間距會變擠-->
 
     </body>
 </html>
