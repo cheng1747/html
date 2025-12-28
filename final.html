@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -28,6 +28,7 @@ body{
 .nav{
     background-color: #222;
     padding: 10px 0;
+    position: relative;
 }
 .nav a{
     color: #fff;
@@ -39,10 +40,34 @@ body{
     color: red;
 }
 
+/* ===== 下拉選單 ===== */
+.dropdown{
+    display: inline-block;
+    position: relative;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #111;
+    min-width: 160px;
+    z-index: 1;
+}
+.dropdown-content a{
+    display: block;
+    padding: 10px;
+    color: white;
+}
+.dropdown-content a:hover{
+    background-color: red;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
 /* ===== Home ===== */
 .home{
-    padding: 60px 20px;
-    background-image: url("https://cdn.pixabay.com/photo/2017/08/06/12/42/motogp-2590316_1280.jpg");
+    padding: 80px 20px;
+    background-image: url("https://cdn.pixabay.com/photo/2016/03/27/22/16/motorcycle-1282233_1280.png");
     background-size: cover;
     background-position: center;
 }
@@ -50,7 +75,7 @@ body{
     font-size: 36px;
     background-color: rgba(0,0,0,0.6);
     display: inline-block;
-    padding: 10px 20px;
+    padding: 15px 25px;
 }
 
 /* ===== Banner ===== */
@@ -60,7 +85,6 @@ body{
 }
 .banner h2{
     font-size: 30px;
-    margin: 20px 0;
 }
 
 /* ===== News ===== */
@@ -106,7 +130,6 @@ body{
     background-color: red;
     margin-top: 10px;
     padding: 5px;
-    font-size: 18px;
 }
 
 /* ===== Gallery ===== */
@@ -139,10 +162,20 @@ body{
     <h1>MotoGP Official</h1>
 </div>
 
+<!-- 導覽列 -->
 <div class="nav">
     <a href="#home">首頁</a>
+
+    <div class="dropdown">
+        <a href="#">車手介紹 ▾</a>
+        <div class="dropdown-content">
+            <a href="#riders">Marc Márquez</a>
+            <a href="#riders">Francesco Bagnaia</a>
+            <a href="#riders">Fabio Quartararo</a>
+        </div>
+    </div>
+
     <a href="#news">最新消息</a>
-    <a href="#riders">車手介紹</a>
     <a href="#gallery">精彩照片</a>
     <a href="#contact">聯絡我們</a>
 </div>
@@ -163,11 +196,11 @@ body{
     <h2>最新消息</h2>
     <div class="news-items">
         <div class="news-item">
-            <img src="https://cdn.pixabay.com/photo/2018/05/15/14/47/motogp-3401217_1280.jpg">
+            <img src="https://cdn.pixabay.com/photo/2018/05/15/14/47/motogp-3401217_1280.png">
             <p>2025 賽季正式開跑，各車隊蓄勢待發！</p>
         </div>
         <div class="news-item">
-            <img src="https://cdn.pixabay.com/photo/2016/11/29/05/45/motorcycle-racing-1866887_1280.jpg">
+            <img src="https://cdn.pixabay.com/photo/2016/11/29/05/45/motorcycle-racing-1866887_1280.png">
             <p>新科技引擎提升速度與安全性</p>
         </div>
     </div>
@@ -176,25 +209,25 @@ body{
 <!-- Riders -->
 <div class="riders" id="riders">
     <div class="rider">
-        <img src="https://cdn.pixabay.com/photo/2017/01/12/22/37/motorbike-1972864_1280.jpg">
-        <h3>車手 A</h3>
+        <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcSvfE4N_cR_QtPo9hLYZnE0Fa9vP13Yj8hKTm9ATEBb1qrF5DUFCv3PUiqSbVQKpn54l0e-EvzmN6ToZrY">
+        <h3>Marc Márquez</h3>
     </div>
     <div class="rider">
-        <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/motorcycle-1869300_1280.jpg">
-        <h3>車手 B</h3>
+        <img src="https://resources.motogp.pulselive.com/photo-resources/2023/11/26/50b10ae0-daf6-43d3-8d82-ab2f7c095575/_DS_3788.jpg?width=1440&height=810">
+        <h3>Francesco Bagnaia</h3>
     </div>
     <div class="rider">
-        <img src="https://cdn.pixabay.com/photo/2017/02/01/21/55/motorcycle-2035870_1280.jpg">
-        <h3>車手 C</h3>
+        <img src="https://gpticketstore.vshcdn.net/uploads/images/741/motogp-fabio-quartararo-yamaha-motogpaustria-motogpitaly-motogpassen-motogpsilverstone-motogpmugello-motogpjerez-motogpsachsenring.jpg">
+        <h3>Fabio Quartararo</h3>
     </div>
 </div>
 
 <!-- Gallery -->
 <div class="gallery" id="gallery">
     <h2>精彩照片</h2>
-    <img src="https://cdn.pixabay.com/photo/2016/03/27/22/16/motorcycle-1282233_1280.jpg">
-    <img src="https://cdn.pixabay.com/photo/2017/08/06/12/42/motogp-2590316_1280.jpg">
-    <img src="https://cdn.pixabay.com/photo/2018/04/16/20/45/motorcycle-racing-3326121_1280.jpg">
+    <img src="https://de.alpinestars.com/cdn/shop/articles/MM93_3small.jpg?v=1744703478&width=1280">
+    <img src="https://www.roadracingworld.com/wp-content/uploads/2024/10/IMG_1885_1730432740-e1730434989590.jpg">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnWCKD1xMV3ZmB4eNO1WSVx5g00CwhK2zN1Q&s">
 </div>
 
 <!-- Footer -->
