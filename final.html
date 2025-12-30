@@ -167,6 +167,7 @@ body{
     overflow: hidden;
     border: 4px solid red;
     border-radius: 15px;
+    max-height: 750px;
 }
 
 .slides{
@@ -176,8 +177,11 @@ body{
 
 .slides img{
     flex: 0 0 100%; /* 每張圖片寬度佔 100% */
+    width: 100%;
+    height: auto;
+    display: block;
+    transform: translateY(-60px);
 }
-
 
 .slider-btn{
     position: absolute;
@@ -234,8 +238,8 @@ body{
 <!-- 圖片輪播 -->
 <div class="slider">
     <div class="slides" id="slides">
-        <img src="https://www.roadracingworld.com/wp-content/uploads/2024/10/IMG_1885_1730432740-e1730434989590.jpg">
-        <img src="https://cdn-5.motorsport.com/images/amp/2jX5Zjk6/s1000/marc-marquez-gresini-racing.jpg">
+        <img src="https://www.motorsportweek.com/wp-content/uploads/2025/04/Adobe-Express-file-5-1.webp">
+        <img src="https://amcn.com.au/wp-content/uploads/2025/06/Francesco-Bagnaia-Aragon-MotoGP-6-June-2025-GnG_1232904_HiRes.jpg">
         <img src="https://s1.cdn.autoevolution.com/images/news/gallery/yamahas-fabio-quartararo-says-he-needs-to-make-strange-overtakes-against-ducati_6.jpg">
     </div>
 
@@ -283,13 +287,9 @@ body{
 </div>
 
 <!-- Footer -->
-<div class="footer">
-    <a href="https://www.motogp.com/" target="_blank" style="color: gray; text-decoration: none;">
-        © 2025 MotoGP Page. All rights reserved.
-    </a>
+<div class="footer" id="contact">
+    &copy; 2025 MotoGP Page. All rights reserved.
 </div>
-
-
 <script>
 let index = 0;
 const slides = document.getElementById("slides");
@@ -313,7 +313,5 @@ function prevSlide(){
 setInterval(nextSlide, 3000);
 </script>
 
-</body>
-</html>
 </body>
 </html>
